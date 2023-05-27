@@ -1,0 +1,11 @@
+<div class="background">
+  <div class="board-container">
+    <div *ngFor="let row of allBlocks" class="row">
+      <div
+        *ngFor="let block of row"
+        class="field-blocks"
+        [ngClass]="block.tetrisElement"
+      ></div>
+    </div>
+  </div>
+</div>

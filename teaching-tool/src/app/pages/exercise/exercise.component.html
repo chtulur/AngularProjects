@@ -1,0 +1,30 @@
+<div class="btn-container">
+  <button class="btn-primary" (click)="showGeneratedText()">Show</button>
+  <button class="btn-primary" (click)="handleRegenerate()">Regenerate</button>
+</div>
+<div class="container">
+  <div class="exercise">
+    <div class="content-wrapper">
+      <div class="elements-wrapper" *ngFor="let element of combinedSheet">
+        <div class="content questions">
+          <div
+            (click)="select(element[0])"
+            class="element"
+            [ngClass]="element[0].clicked ? 'element clicked' : ''"
+          >
+            {{ element[0].element }}
+          </div>
+        </div>
+        <div class="content answers">
+          <div
+            (click)="select(element[1])"
+            class="element"
+            [ngClass]="element[1].clicked ? ' element clicked' : ''"
+          >
+            {{ element[1].element }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

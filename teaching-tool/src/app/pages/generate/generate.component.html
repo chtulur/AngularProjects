@@ -1,0 +1,78 @@
+<div class="form-container">
+  <form>
+    <button type="submit" class="btn-primary" (click)="generate()">
+      Generate Exercise
+    </button>
+    <div class="form-group">
+      <label for="level">Level:</label>
+      <select
+        class="form-control"
+        name="level"
+        [(ngModel)]="exerciseParams.level"
+      >
+        <option value="A1">A1</option>
+        <option value="A2">A2</option>
+        <option value="B1">B1</option>
+        <option value="B2">B2</option>
+        <option value="C1">C1</option>
+        <option value="C2">C2</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="grammar">Type:</label>
+      <input
+        type="text"
+        class="form-control"
+        name="type"
+        [(ngModel)]="exerciseParams.exerciseType"
+      />
+    </div>
+    <div class="form-group">
+      <label for="grammar">Grammar:</label>
+      <input
+        type="text"
+        class="form-control"
+        name="grammar"
+        [(ngModel)]="exerciseParams.grammar"
+      />
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea
+        class="form-control"
+        name="description"
+        [(ngModel)]="exerciseParams.description"
+      ></textarea>
+    </div>
+    <div class="form-group">
+      <label for="format">Format:</label>
+      <input
+        type="text"
+        class="form-control"
+        name="format"
+        [(ngModel)]="exerciseParams.format"
+      />
+    </div>
+    <div class="form-group">
+      <label for="numPairs">Number of pairs:</label>
+      <input
+        type="number"
+        class="form-control"
+        name="numPairs"
+        [(ngModel)]="exerciseParams.numPairs"
+      />
+    </div>
+    <div class="checkbox">
+      <label for="shuffle">Shuffle:</label>
+      <label for="shuffle">
+        <input
+          type="checkbox"
+          id="shuffle"
+          name="shuffle"
+          [(ngModel)]="exerciseParams.shuffled"
+        />
+        <div class="slider"></div>
+      </label>
+    </div>
+  </form>
+</div>
